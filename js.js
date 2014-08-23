@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	
 	enterItem = []
-	itemNumber = 0
+	itemNumber = 0 
 
 	function check_delete() {
 		$('#itemsListed').find('li').on('click', function() {
