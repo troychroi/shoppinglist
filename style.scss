@@ -92,12 +92,12 @@ input:focus {
 	border: 2px solid $RED;
 }
 
-#itemInput li:last-child {
-	width: 20px;
-	height: 20px;
+#itemInput li button {
+	width: 22px;
+	height: 22px;
 	border: 2px solid rgb(120, 106, 98);
+	background-color: white;
 	border-radius: 5px;
-	font-size: 16px;
 }
 
 #itemsListed {
