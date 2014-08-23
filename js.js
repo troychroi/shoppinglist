@@ -21,9 +21,6 @@ $(document).ready(function() {
 		});
 	} */
 
-	// define dynamically populated list items
-	var listItems = $('#itemsListed').find('li')
-
 	// mark item as checked and add delete functionality 
 	function check() {
 		$('#itemsListed').on('click', 'li', function() {	
@@ -52,7 +49,7 @@ $(document).ready(function() {
 	$('.addButton').on('click', function() {
 		alert($('#itemInput').find('input').val());
 		if ($('#itemInput').find('input').val() != '') {
-			if (enterItem == []) {
+			if (itemNumber <= 0) {
 				// push entered items into blank enterItem array
 				enterItem.push($('#itemInput').find('input').val());
 				$('#itemsListed').append('<li>'+ enterItem[itemNumber] +'</li>');
