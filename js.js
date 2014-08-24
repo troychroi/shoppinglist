@@ -1,24 +1,8 @@
 $(document).ready(function() {
 	
 	enterItem = []
-	itemNumber = 0
+	itemNumber = 0 
 
-	/* function check_delete() {
-		$('#itemsListed').find('li').on('click', function() {
-			$(this).toggleClass('checked');
-			$(this).append('<hr />');
-			$(this).append('<button>X</button>');
-			$(this).find('button').addClass('trash');
-			$('li').not('.checked').find('hr').remove();
-			$('li').not('.checked').find('button').remove();
-			$('.trash').on('click', function() {
-				$(this).closest('li').remove();
-				if (itemNumber >= 1) {
-					itemNumber --;
-				}
-			});
-		});
-	} */
 
 	// mark item as checked and add delete functionality 
 	function check() {
