@@ -1,22 +1,113 @@
-/*
-Errno::ENOENT: No such file or directory @ rb_sysopen - style.scss
+@import url(http://fonts.googleapis.com/css?family=Permanent+Marker);
+@import url(http://fonts.googleapis.com/css?family=Bangers);
+/*			^		FONTS 		^			*/
+body {
+  width: 960px;
+  margin: 0 auto;
+  color: #2e4100;
+  background-color: #ffe9a5; }
 
-Backtrace:
-/usr/local/Cellar/ruby/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.2.13/lib/sass/plugin/compiler.rb:360:in `read'
-/usr/local/Cellar/ruby/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.2.13/lib/sass/plugin/compiler.rb:360:in `update_stylesheet'
-/usr/local/Cellar/ruby/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.2.13/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
-/usr/local/Cellar/ruby/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.2.13/lib/sass/plugin/compiler.rb:201:in `each'
-/usr/local/Cellar/ruby/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.2.13/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
-/usr/local/Cellar/ruby/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.2.13/lib/sass/plugin/compiler.rb:283:in `block in watch'
-/usr/local/Cellar/ruby/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.2.13/vendor/listen/lib/listen/multi_listener.rb:108:in `call'
-/usr/local/Cellar/ruby/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.2.13/vendor/listen/lib/listen/multi_listener.rb:108:in `on_change'
-/usr/local/Cellar/ruby/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.2.13/vendor/listen/lib/listen/multi_listener.rb:117:in `block in initialize_adapter'
-/usr/local/Cellar/ruby/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.2.13/vendor/listen/lib/listen/adapter.rb:198:in `call'
-/usr/local/Cellar/ruby/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.2.13/vendor/listen/lib/listen/adapter.rb:198:in `report_changes'
-/usr/local/Cellar/ruby/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.2.13/vendor/listen/lib/listen/adapter.rb:210:in `poll_changed_dirs'
-/usr/local/Cellar/ruby/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.2.13/vendor/listen/lib/listen/adapters/darwin.rb:38:in `block in start'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Errno::ENOENT: No such file or directory @ rb_sysopen - style.scss"; }
+/* 					HEADER					*/
+header {
+  width: 100%;
+  margin: 0 auto;
+  border-bottom: 2px solid #786a62;
+  padding-bottom: 5px;
+  margin: 15px 0; }
+
+#logo {
+  width: 270px;
+  height: 171px;
+  background-image: url("images/avocado_270.png");
+  background-repeat: no-repeat;
+  margin: 0 auto; }
+
+#title {
+  width: 540px;
+  text-align: center;
+  margin: 0 auto;
+  font-family: 'Bangers', cursive;
+  font-size: 70px; }
+
+#slogan {
+  width: 540px;
+  text-align: center;
+  margin: 0 auto;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 30px;
+  color: #372921; }
+
+/* 					MAIN					*/
+#mainContainer {
+  width: 100%;
+  position: relative; }
+
+ul li {
+  list-style-type: none;
+  text-align: center; }
+
+#itemInput {
+  width: 247px;
+  margin: 0 auto; }
+
+#itemInput li {
+  float: left; }
+
+input {
+  width: 213px;
+  height: 24px;
+  outline: none;
+  border-radius: 5px;
+  border: 2px solid #786a62;
+  margin-right: 10px;
+  text-align: center;
+  font-family: Monaco, monospace; }
+
+input:focus {
+  border: 2px solid #b34c16; }
+
+#itemInput li button {
+  width: 22px;
+  height: 22px;
+  border: 2px solid #786a62;
+  background-color: white;
+  border-radius: 5px; }
+
+#itemsListed {
+  width: 540px;
+  height: 24px;
+  margin: 0 auto;
+  position: relative;
+  top: 10px; }
+
+#itemsListed li {
+  border-left: 30px solid #afbe56;
+  background-color: white;
+  clear: both;
+  height: 20px;
+  font-family: Helvetica, sans-serif;
+  margin-bottom: 5px; }
+
+.checked {
+  opacity: .5; }
+
+.trash {
+  position: relative;
+  top: -38px;
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  background-color: white;
+  float: right;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  font-size: 8px;
+  margin-bottom: -38px;
+  opacity: 0; }
+
+.checked hr {
+  position: relative;
+  top: -18px;
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  width: 30px;
+  left: -30px; }
