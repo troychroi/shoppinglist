@@ -75,6 +75,7 @@ input:focus {
 
 #itemsListed {
   width: 540px;
+  height: 24px;
   margin: 0 auto;
   position: relative;
   top: 10px; }
@@ -88,10 +89,9 @@ input:focus {
   margin-bottom: 5px; }
 
 .checked {
-  text-decoration: line-through;
   opacity: .5; }
 
-.checked button {
+.trash {
   position: relative;
   top: -38px;
   border: 2px solid rgba(0, 0, 0, 0.6);
@@ -101,12 +101,13 @@ input:focus {
   height: 20px;
   border-radius: 5px;
   font-size: 8px;
-  margin-bottom: -38px; }
+  margin-bottom: -38px;
+  opacity: 0; }
 
 .checked hr {
   position: relative;
   top: -18px;
   border: none;
   border: 1px solid rgba(0, 0, 0, 0.6);
-  width: 516px;
+  width: 30px;
   left: -30px; }
