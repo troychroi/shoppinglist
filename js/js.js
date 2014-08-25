@@ -1,7 +1,14 @@
 $(document).ready(function() {
 	
+	$('header').animate({'top' : '0'});
+
 	var enterItem = [];
 	var itemNumber = 0; 
+
+	$(function() {
+    	$( "#itemsListed" ).sortable();
+    	$( "#itemsListed" ).disableSelection();
+  	});
 
 
 	// mark item as checked and add delete functionality 
