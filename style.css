@@ -1,6 +1,12 @@
 @import url(http://fonts.googleapis.com/css?family=Permanent+Marker);
 @import url(http://fonts.googleapis.com/css?family=Bangers);
 /*			^		FONTS 		^			*/
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
 body {
   width: 960px;
   margin: 0 auto;
@@ -81,6 +87,7 @@ input:focus {
 
 #itemsListed li {
   border-left: 30px solid #afbe56;
+  border-bottom: 1px solid #786a62;
   background-color: white;
   clear: both;
   height: 20px;
@@ -110,3 +117,15 @@ input:focus {
   border: 1px solid rgba(0, 0, 0, 0.6);
   width: 30px;
   left: -30px; }
+
+/*					FOOTER					*/
+
+footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	min-width: 960px;
+	background: rgba(255,255,255,.6);
+	border-top: 2px solid rgb(0,0,0);
+}

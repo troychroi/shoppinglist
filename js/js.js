@@ -5,7 +5,6 @@ $(document).ready(function() {
 
 
 	// mark item as checked and add delete functionality 
-	function check() {
 		$('#itemsListed').on('click', 'li', function() {	
 			$(this).toggleClass('checked');
 			$(this).append('<hr />');
@@ -21,28 +20,34 @@ $(document).ready(function() {
 				$(this).closest('li').remove();
 			});
 		});
-	}
+
+		// add first entered item into blank enterItem array
+		function addFirstItem() {
+			enterItem.push($('#itemInput').find('input').val());
+			$('#itemsListed').append('<li>'+ enterItem[itemNumber] +'</li>');
+			$('#itemInput').find('input').val('');
+			itemNumber ++;
+		}
+		
+		// add entered items into previously populated enterItem array
+		function addMoreItems() {
+			enterItem.push($('#itemInput').find('input').val());
+			$('#itemsListed').prepend('<li>'+ enterItem[itemNumber] +'</li>');
+			$('#itemInput').find('input').val('');
+			itemNumber ++;
+		}
+
 
 	// enable add button
 	$('.addButton').on('click', function() {
 		// prevent emptiness being pushed into array
 		if ($('#itemInput').find('input').val() !== '') {
 			if (itemNumber === 0) {
-				// push entered items into blank enterItem array
-				enterItem.push($('#itemInput').find('input').val());
-				$('#itemsListed').append('<li>'+ enterItem[itemNumber] +'</li>');
-				$('#itemInput').find('input').val('');
-				check();
+				addFirstItem();				
 				$('#itemInput').find('input').focus();
-				itemNumber ++;
 			} else if (itemNumber > 0) {
-				// add entered items into previously populated enterItem array
-				enterItem.push($('#itemInput').find('input').val());
-				$('#itemsListed').prepend('<li>'+ enterItem[itemNumber] +'</li>');
-				$('#itemInput').find('input').val('');
-				check();
+				addMoreItems();
 				$('#itemInput').find('input').focus();
-				itemNumber ++;
 			}
 		}
 	});
@@ -52,19 +57,9 @@ $(document).ready(function() {
 		// prevent emptiness being pushed into array
 		if ($('#itemInput').find('input').val() !== '') {
 			if (event.which == 13 && enterItem === []) {
-				// push entered items into blank enterItem array
-				enterItem.push($('#itemInput').find('input').val());
-				$('#itemsListed').append('<li>'+ enterItem[itemNumber] +'</li>');
-				$('#itemInput').find('input').val('');
-				check();
-				itemNumber ++;
+				addFirstItem();
 			} else if (event.which == 13) {
-				// add entered items into previously populated enterItem array
-				enterItem.push($('#itemInput').find('input').val());
-				$('#itemsListed').prepend('<li>'+ enterItem[itemNumber] +'</li>');
-				$('#itemInput').find('input').val('');
-				check();
-				itemNumber ++;
+				addMoreItems();
 			}
 		}
 	});
