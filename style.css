@@ -15,6 +15,8 @@ body {
 
 /* 					HEADER					*/
 header {
+  position: relative;
+  top: -311px;
   width: 100%;
   margin: 0 auto;
   border-bottom: 2px solid #786a62;
@@ -46,7 +48,8 @@ header {
 /* 					MAIN					*/
 #mainContainer {
   width: 100%;
-  position: relative; }
+  position: relative; 
+}
 
 ul li {
   list-style-type: none;
