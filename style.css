@@ -1,6 +1,12 @@
 @import url(http://fonts.googleapis.com/css?family=Permanent+Marker);
 @import url(http://fonts.googleapis.com/css?family=Bangers);
 /*			^		FONTS 		^			*/
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
 body {
   width: 960px;
   margin: 0 auto;
@@ -66,12 +72,12 @@ input {
 input:focus {
   border: 2px solid #b34c16; }
 
-#itemInput li:last-child {
-  width: 20px;
-  height: 20px;
+.addButton {
+  width: 22px;
+  height: 22px;
   border: 2px solid #786a62;
-  border-radius: 5px;
-  font-size: 16px; }
+  background-color: white;
+  border-radius: 5px; }
 
 #itemsListed {
   width: 540px;
@@ -81,6 +87,7 @@ input:focus {
 
 #itemsListed li {
   border-left: 30px solid #afbe56;
+  border-bottom: 1px solid #786a62;
   background-color: white;
   clear: both;
   height: 20px;
@@ -88,10 +95,9 @@ input:focus {
   margin-bottom: 5px; }
 
 .checked {
-  text-decoration: line-through;
   opacity: .5; }
 
-.checked button {
+.trash {
   position: relative;
   top: -38px;
   border: 2px solid rgba(0, 0, 0, 0.6);
@@ -101,12 +107,25 @@ input:focus {
   height: 20px;
   border-radius: 5px;
   font-size: 8px;
-  margin-bottom: -38px; }
+  margin-bottom: -38px;
+  opacity: 0; }
 
 .checked hr {
   position: relative;
   top: -18px;
   border: none;
   border: 1px solid rgba(0, 0, 0, 0.6);
-  width: 516px;
+  width: 30px;
   left: -30px; }
+
+/*					FOOTER					*/
+
+footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	min-width: 960px;
+	background: rgba(255,255,255,.6);
+	border-top: 2px solid rgb(0,0,0);
+}
