@@ -1,5 +1,7 @@
 $(document).ready(function() {
 	
+	$('header').animate({'top' : '0'});
+
 	var enterItem = [];
 	var itemNumber = 0; 
 
