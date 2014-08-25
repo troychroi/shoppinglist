@@ -54,7 +54,9 @@ ul li {
 
 #itemInput {
   width: 247px;
-  margin: 0 auto; }
+  margin: 0 auto; 
+  margin-bottom: 20px;
+}
 
 #itemInput li {
   float: left; }

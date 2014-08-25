@@ -3,6 +3,11 @@ $(document).ready(function() {
 	var enterItem = [];
 	var itemNumber = 0; 
 
+	$(function() {
+    	$( "#itemsListed" ).sortable();
+    	$( "#itemsListed" ).disableSelection();
+  	});
+
 
 	// mark item as checked and add delete functionality 
 		$('#itemsListed').on('click', 'li', function() {	
